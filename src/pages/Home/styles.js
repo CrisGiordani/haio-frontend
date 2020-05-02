@@ -48,21 +48,21 @@ export const Container = styled.div`
   
 `;
 
-export const BusinessList = styled.div`
+export const Destaques = styled.div`
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   justify-content: space-between;
 `;
 
-export const Business = styled.div`
+export const Card = styled.div`
   width: 30%;
-  max-width: 260px;
+  max-width: 280px;
   display: flex;
   flex: 1;
   justify-content: space-between;
 
-  padding: 20px;
+  padding: 24px;
   background: #fff;
 
   border: 1px solid #7C7C7C;

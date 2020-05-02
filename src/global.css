@@ -1,16 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Roboto:200,400,700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  font: 400 14px Roboto, sans-serif;
+  font: 200 14px Roboto, sans-serif;
   background: #F6F9FB;
-  -webkit-font-smoothing: antialiased;
+  
+}
+
+h1 {
+  font: 400 22px Montserrat, sans-serif;
+} 
+h2 {
+  font: 400 20px Montserrat, sans-serif;
+} 
+h3 {
+  font: 400 18px Montserrat, sans-serif;
 }
 
 input,

@@ -22,10 +22,10 @@ export default function Header() {
         <nav>
           <img src={logo} alt="Haio" />
           <MenuItem to="/">Home</MenuItem>
-          <MenuItem to="/">Quem somos</MenuItem>
-          <MenuItem to="/">Atendimento</MenuItem>
-          <MenuItem to="/">Seja Parceiro</MenuItem>
-          <MenuItem to="/">Cadastre-se</MenuItem>
+          <MenuItem to="/quem_somos">Quem somos</MenuItem>
+          <MenuItem to="/atendimento">Atendimento</MenuItem>
+          <MenuItem to="/seja_parceiro">Seja Parceiro</MenuItem>
+          <MenuItem to="/cadatre_se">Cadastre-se</MenuItem>
         </nav>
 
         <aside>

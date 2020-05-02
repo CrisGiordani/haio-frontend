@@ -4,24 +4,26 @@ import Header from "../../components/Header";
 import Button from "../../components/Button";
 import Footer from "../../components/Footer";
 
-import homeTopText from "../../assets/home_top_text.svg";
-import homeTopImg from "../../assets/home_top_img.svg";
-import shoppingCart from "../../assets/shopping-cart.svg";
+// assets 
+import homeTopText from "./assets/top_text.svg";
+import homeTopImg from "./assets/top_img.svg";
+import shoppingCart from "./assets/shopping-cart.svg";
+// global assets
 import starIcon from "../../assets/star.png";
 
-import { Container, BusinessList, Info, Business } from './styles';
+import { Container, Destaques, Card, Info } from './styles';
 
-export default function Landing(req, res) {
+export default function Home(req, res) {
 
-  const business = [
+  const destaques = [
     {
       id: '000000001', //uuid 
       avatar: 'id-01.jpg',
       name: 'Mercado Mangalot',
       setor: 'Mercado',
-      score: '4.5',
+      score: '4.6',
       distance: '2.5',
-      delivery_value: '4.50',
+      delivery_value: '6.50',
       delivery_time: '30',
     },
     {
@@ -29,18 +31,18 @@ export default function Landing(req, res) {
       avatar: 'id-02.jpg',
       name: 'Supermercado Barca',
       setor: 'Mercado',
-      score: '4.5',
-      distance: '2.5',
-      delivery_value: '4.50',
-      delivery_time: '30',
+      score: '4.8',
+      distance: '0.8',
+      delivery_value: '3.50',
+      delivery_time: '20',
     },
     {
       id: '000000003',
       avatar: 'id-03.jpg',
       name: 'Mercado Letícia',
       setor: 'Mercado',
-      score: '4.5',
-      distance: '2.5',
+      score: '4.7',
+      distance: '1.2',
       delivery_value: '4.50',
       delivery_time: '30', 
     }
@@ -75,9 +77,9 @@ export default function Landing(req, res) {
         </div>
 
         <h2>Os destaques da Haio</h2>  
-        <BusinessList>
-          {business.map(item => (
-            <Business key={item.id}>
+        <Destaques>
+          {destaques.map(item => (
+            <Card key={item.id}>
               <img alt={item.name} src={`https://api.adorable.io/avatars/50/${item.name}.png`} />
               <Info>
                 <strong>{item.name}</strong>
@@ -87,15 +89,16 @@ export default function Landing(req, res) {
                     {item.setor} - {item.distance} Km
                 </score>
                 <delivery> 
-                  {item.delivery_time} min [ Entrega: <span>{item.delivery_value}</span> ]
+                  aprox. {item.delivery_time} min [ R$ <span>{item.delivery_value}</span> ]
                 </delivery>
               </Info>
-            </Business>
+            </Card>
           ))}
-        </BusinessList>
+        </Destaques>
 
         <Footer />
       </Container>
+      
     </>
   )
   }

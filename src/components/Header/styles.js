@@ -33,7 +33,7 @@ export const Content = styled.div`
 
     img {
       margin-right: 20px;
-      max-height: 40px;
+      max-height: 45px;
       padding-right: 20px;
     }
 
