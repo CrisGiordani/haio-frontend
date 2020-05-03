@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
 import QuemSomos from "./pages/QuemSomos";
-
+import Atendimento from "./pages/Atendimento";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -22,7 +22,7 @@ export default function Routes() {
             <>
               <Route path="/" exact component={Home} /> 
               <Route path="/quem_somos" component={QuemSomos} /> 
-              
+              <Route path="/atendimento" component={Atendimento} /> 
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             </>
