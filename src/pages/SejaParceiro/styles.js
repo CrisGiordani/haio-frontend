@@ -11,7 +11,7 @@ export const ModalContainer = styled.div`
   
   justify-content: space-between;
   align-items: center;
-  padding: 60px 0 40px 0;
+  padding: 30px 0 40px 0;
 
   flex-direction: column;
 
@@ -23,17 +23,6 @@ export const ModalContainer = styled.div`
     
   }
 
-  span {
-    margin: 80px auto;
-    width:60%;
-    text-align: left;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1em;
-    margin-bottom: 12px;
-    line-height: 180%;
-  }
-
   form {
     width:90%;
     display: flex;
@@ -42,13 +31,24 @@ export const ModalContainer = styled.div`
 
     label {
       font-size: 1em;
-      margin-bottom: 8px;
+      margin: 12px 0 8px;
+    }
+    input {
+      height: 32px;
+    }
+    span {
+      margin-top: 4px;
+      text-align: left;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 0.8em;
+      color: #444;
     }
   }
 
   h1 {
     font-weight: 400;
-    margin: 40px auto;
+    margin: 30px auto;
 
     strong {
       font-weight: 600;

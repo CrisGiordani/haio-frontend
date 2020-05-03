@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
     overflow:'scroll',
     left: '50%', 
     top: '50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    display:'block'
   },
 }));
 // END MODAL SETTINGS

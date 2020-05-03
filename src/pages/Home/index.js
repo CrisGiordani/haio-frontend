@@ -61,7 +61,7 @@ export default function Home(req, res) {
         <span>Descubra um mercadinho mais próximo de você</span>
         <form>
           <input placeholder="Digite seu endereço ou CEP" />
-          <Button style={{padding:'22px 40px'}}>Buscar </Button>
+          <Button style={{padding:'22px 40px', marginLeft:20}}>Buscar </Button>
         </form>
 
         <div style={{ marginTop: 80 }}>
