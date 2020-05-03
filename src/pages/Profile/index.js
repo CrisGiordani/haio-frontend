@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { FiPower } from "react-icons/fi";
 
 import "./styles.css";
 
 export default function Profile(req, res) {
-  const [userName, setUserName] = useState('');
+  const userName = '';
   const history = useHistory();
 
   async function handleLogout() {

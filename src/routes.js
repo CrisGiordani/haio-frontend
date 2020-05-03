@@ -6,7 +6,6 @@ import QuemSomos from "./pages/QuemSomos";
 import Atendimento from "./pages/Atendimento";
 
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 
 export default function Routes() {
@@ -24,7 +23,6 @@ export default function Routes() {
               <Route path="/quem_somos" component={QuemSomos} /> 
               <Route path="/atendimento" component={Atendimento} /> 
               <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
             </>
           )
         }

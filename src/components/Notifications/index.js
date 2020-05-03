@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { FiBell } from "react-icons/fi";
-import { parseISO, formatRelative } from "date-fns";
-import { ptBR } from "date-fns/locale";
+//import { parseISO, formatRelative } from "date-fns";
+//import { ptBR } from "date-fns/locale";
 
 // import api from "../../services/api";
 
