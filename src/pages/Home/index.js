@@ -51,7 +51,6 @@ export default function Home(req, res) {
   return (
     <> 
       <Header />
-      
       <Container>
 
         <div>

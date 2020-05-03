@@ -2,7 +2,6 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 
 import "./global.css";
-import "react-toastify/dist/ReactToastify.css";
 
 import Routes from "./routes";
 
