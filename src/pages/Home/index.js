@@ -53,49 +53,48 @@ export default function Home(req, res) {
       <Header />
       <Container>
 
-        <div>
-          <img style={{ maxWidth:'60%' }} src={homeTopText} alt="Nunca foi tão fácil realizar uma compra online, perto de você e sem sair de casa."/>
-          <img style={{ maxWidth:'25%' }} src={homeTopImg} alt="Haio" />
+        <div className='divBody'>
+          <img style={{ maxWidth:'65%' }} src={homeTopText} alt="Nunca foi tão fácil realizar uma compra online, perto de você e sem sair de casa."/>
+          <img style={{ maxWidth:'30%' }} src={homeTopImg} alt="Haio" />
         </div>
 
-        <span>Descubra um mercadinho mais próximo de você</span>
+        <span>Descubra um estabelecimento mais próximo de você</span>
         <form>
           <input placeholder="Digite seu endereço ou CEP" />
-          <Button style={{padding:'22px 40px', marginLeft:20}}>Buscar </Button>
+          <Button className='btBuscar'>Buscar </Button>
         </form>
 
-        <div style={{ marginTop: 80 }}>
+        <div className='divBody'>
           <img style={{ maxWidth:'30%' }} src={shoppingCart} alt="Shopping Cart - Haio"/>
-          <span style={{ margin: '40px 20% 0 40px', maxWidth:'50%' }} >
+          <span style={{ margin: '0 10% 0 10%', maxWidth:'50%' }} >
               O PRODUTO é focado na cotação para o consumidor que escolhe a loja que quer 
               pedir, fala com o vendedor, realiza pagamento por link e finaliza a transação 
               por meio de retirada ou serviço de entrega.
 
-              <Button style={{ marginTop: '20px', marginLeft:0}}>Cadastre-se</Button>
+              <Button style={{ marginTop: '10%', marginLeft:0}}>Cadastre-se</Button>
           </span>
         </div>
 
         <h2>Os destaques da Haio</h2>  
-        <Destaques>
+        <Destaques className='divBody'>
           {destaques.map(item => (
             <Card key={item.id}>
               <img alt={item.name} src={`https://api.adorable.io/avatars/50/${item.name}.png`} />
-              <Info>
+              <div className="info">
                 <strong>{item.name}</strong>
                 <score>
                     <img src={starIcon} alt="Avaliação" />
                     <nota>{item.score}</nota>
-                    {item.setor} - {item.distance} Km
+                    {item.setor} 
                 </score>
-                <delivery> 
-                  aprox. {item.delivery_time} min [ R$ <span>{item.delivery_value}</span> ]
-                </delivery>
-              </Info>
+                <delivery>Entrega: R$ {item.delivery_value}</delivery>
+                <delivery>Aprox. {item.delivery_time} min - {item.distance} Km</delivery>
+              </div>
             </Card>
           ))}
         </Destaques>
 
-        <Footer />
+        <Footer  className='divBody'/>
       </Container>
       
     </>

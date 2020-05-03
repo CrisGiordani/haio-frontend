@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import Notifications from "../Notifications";
 import Button from "../Button";
 
+import { FiMenu, FiX } from 'react-icons/fi';
+
 import SejaParceiro from '../../pages/SejaParceiro';
 import CadastreSe from '../../pages/CadastreSe';
 
-import logo from "../../assets/logo.svg";
+import haio from "../../assets/haio.svg";
 
-import { Container, Content, Profile, MenuItem } from "./styles";
+import { Container, Content, Profile, MenuItem, MenuMobile, MenuMobileItem } from "./styles";
 
 
 // BEGIN MODAL SETTINGS
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#F6F9FB',
     border: '1px solid #000',
     boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
+    padding: theme.spacing(2, 4, 3),  
     overflow:'scroll',
     left: '50%', 
     top: '50%',
@@ -32,8 +34,11 @@ const useStyles = makeStyles((theme) => ({
 // END MODAL SETTINGS
 
 export default function Header() {
+  
+  const [visible, setVisible] = useState(false);
+
+  // BEGIN MODAL 
   const classes = useStyles();
-  // BRGIN MODAL 
   const [open, setOpen] = useState(false);
   const [body, setBody] = useState('');
 
@@ -54,6 +59,12 @@ export default function Header() {
 
   // END MODAL
 
+  // MENU MOBILE
+  function handleToggleVisible() {
+    setVisible(!visible);
+  }
+
+
   // useSelector Redux || localStorage
   const logged = false;
   const user = {
@@ -62,6 +73,7 @@ export default function Header() {
     whatsapp: '5551984100800',
   }
   return (
+    
     <Container>
       <Modal
         open={open}
@@ -73,7 +85,7 @@ export default function Header() {
       </Modal>
       <Content>
         <nav>
-          <img src={logo} alt="Haio" />
+          <img src={haio} alt="Haio" />
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/quem_somos">Quem somos</MenuItem>
           <MenuItem to="/atendimento">Atendimento</MenuItem>
@@ -100,8 +112,19 @@ export default function Header() {
              ) : (
               <Button>Entrar</Button>
             )
-          }
+          }   
         </aside>
+        <colapsed>
+          <FiMenu color="#BE0E02" onClick={handleToggleVisible} />
+          <MenuMobile visible={visible}>
+            <FiX color="#FFF" style={{ margin: '12px 8px'}} onClick={handleToggleVisible} />
+            <MenuMobileItem to="/">Home</MenuMobileItem>
+            <MenuMobileItem to="/quem_somos">Quem somos</MenuMobileItem>
+            <MenuMobileItem to="/atendimento">Atendimento</MenuMobileItem>
+            <MenuMobileItem onClick={() => handleOpen('SejaParceiro')}>Seja Parceiro</MenuMobileItem>
+            <MenuMobileItem onClick={() => handleOpen('CadastreSe')}>Cadastre-se</MenuMobileItem>
+          </MenuMobile>
+        </colapsed>
       </Content>
     </Container>
   );
