@@ -50,7 +50,7 @@ export default function Home(req, res) {
 
   return (
     <> 
-      <Header />
+      <Header>Descomplique!</Header>
       <Container>
 
         <RowBlock>

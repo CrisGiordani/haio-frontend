@@ -127,6 +127,21 @@ export const MenuMobileItem = styled(Link)`
   }
 `;
 
+export const MobileTitle = styled.div`
+  @media ${device.mobile} {
+    margin-left: 0;
+    width: 100%;
+    display: inline;
+    font-size: 1em;
+    font-weight: 200;
+    color: rgba(190, 14, 2, 1);
+  }
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
+
 export const Profile = styled.div`
   display: flex;
   margin-left: 20px;

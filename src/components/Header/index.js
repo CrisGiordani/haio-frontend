@@ -10,7 +10,7 @@ import CadastreSe from '../../pages/CadastreSe';
 
 import haio from "../../assets/haio.svg";
 
-import { Container, Content, Profile, MenuItem, MenuMobile, MenuMobileItem } from "./styles";
+import { Container, Content, Profile, MenuItem, MenuMobile, MenuMobileItem, MobileTitle } from "./styles";
 
 
 // BEGIN MODAL SETTINGS
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 // END MODAL SETTINGS
 
-export default function Header() {
+export default function Header({children}) {
   
   const [visible, setVisible] = useState(false);
 
@@ -92,6 +92,7 @@ export default function Header() {
       <Content>
         <nav>
           <img src={haio} alt="Haio" />
+          <MobileTitle>: : &nbsp; &nbsp; {children}</MobileTitle>
           <MenuItem to="/">Home</MenuItem>
           <MenuItem to="/quem_somos">Quem somos</MenuItem>
           <MenuItem to="/atendimento">Atendimento</MenuItem>

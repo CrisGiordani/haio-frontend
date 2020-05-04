@@ -14,7 +14,7 @@ export default function QuemSomos(req, res) {
 
   return (
     <> 
-      <Header />
+      <Header>Quem somos</Header>
       
       <Container>
 

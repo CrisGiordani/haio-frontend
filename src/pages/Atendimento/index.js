@@ -14,7 +14,7 @@ export default function Atendimento(req, res) {
 
   return (
     <> 
-      <Header />
+      <Header>Atendimento</Header>
       <Container>
 
         <img style={{ maxWidth:'45%', minWidth: 250 }} src={img1stText} alt="Para você que deseja vender online e ter resultados imediato."/>
