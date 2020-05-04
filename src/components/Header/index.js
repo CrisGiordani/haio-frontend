@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     overflow:'scroll',
     left: '50%', 
     top: '50%',
+    width: '90%',
+    minWidth: '300px',
+    maxWidth: '600px',
+    maxHeight: '90%',
     transform: 'translate(-50%, -50%)',
     display:'block'
   },
@@ -45,7 +49,9 @@ export default function Header() {
   function handleOpen(page) {
     setOpen(true); 
 
-    if(page === 'SejaParceiro') { setBody(<div className={classes.paper}><SejaParceiro /></div>); }
+    if(page === 'SejaParceiro') { 
+      setBody(<div className={classes.paper}><SejaParceiro /></div>); 
+    }
     if(page === 'CadastreSe') {
       setBody(<div className={classes.paper}><CadastreSe /></div>);
     }

@@ -2,9 +2,7 @@ import React from "react";
 
 import logo from "../../assets/logo.svg";
 
-import Button from '../../components/Button';
-
-import { ModalContainer } from './styles';
+import { ModalContainer, SubmitButton } from './styles';
 
 export default function QuemSomos(req, res) {
 
@@ -31,7 +29,7 @@ export default function QuemSomos(req, res) {
             <label>Crie uma senha para acessar a plataforma</label>
             <input placeholder="Ex: André Fernandes" />
 
-            <Button className="button" style={{ marginTop: '20px', width: '100%', fontSize: '1em' }}>Criar minha conta e acessar a plataforma</Button>
+            <SubmitButton>Criar minha conta e acessar a plataforma</SubmitButton>
         </form>
       </ModalContainer>
   )

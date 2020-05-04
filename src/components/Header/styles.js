@@ -26,7 +26,7 @@ export const MenuItem = styled(Link)`
 export const Content = styled.div`
   height: 64px;
   width: 90%; 
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

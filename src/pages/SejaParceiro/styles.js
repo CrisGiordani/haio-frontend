@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import { device } from '../../devices';
+
+import Button from '../../components/Button';
 
 export const ModalContainer = styled.div`
 
   width: 100%;
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
 
   display: flex;
@@ -24,13 +27,25 @@ export const ModalContainer = styled.div`
   }
 
   form {
-    width:90%;
+    width:100%;
     display: flex;
     flex-direction: column;
     flex:1;
 
     label {
-      font-size: 1em;
+      
+      @media ${device.mobile} {
+        font-size: 0.8em;
+      }
+  
+      @media ${device.tablet} { 
+        font-size: 1em;
+      }
+  
+      @media ${device.desktop} { 
+        font-size: 1em;
+      }
+
       margin: 12px 0 8px;
     }
     input {
@@ -56,4 +71,22 @@ export const ModalContainer = styled.div`
     }
   }
 
+`;
+
+
+export const SubmitButton = styled(Button)`
+    min-width: 100%;
+    margin-top: 1em; 
+    padding: 12px 20px;
+    @media ${device.mobile} {
+      font-size: 0.8em;
+    }
+
+    @media ${device.tablet} { 
+      font-size: 1em;
+    }
+
+    @media ${device.desktop} { 
+      font-size: 1em;
+    }
 `;
