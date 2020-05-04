@@ -28,7 +28,6 @@ export default function Login() {
     <LoginContainer>
       <Form onSubmit={handleLogin}>
           <Title>Faça seu login</Title>
-
           <input
             placeholder="Celular com DDD"
             value={mobile}

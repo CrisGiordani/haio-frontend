@@ -4,7 +4,7 @@ import iconInstagram from "../../assets/icon-instagram.png";
 import iconTwitter from "../../assets/icon-twitter.png";
 import iconFacebook from "../../assets/icon-facebook.png";
 
-import { Container, Navegacao, Bloco, Copyright } from "./styles";
+import { Container, Navegacao, ColBlock, Copyright } from "./styles";
 
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <Container>
       <Navegacao>
-        <Bloco>
+        <ColBlock>
           <strong>Categorias</strong>
           <ul>
             <li>Mercados</li>
@@ -20,8 +20,8 @@ export default function Footer() {
             <li>Farmácias</li>
             <li>Bebidas</li>
           </ul>
-        </Bloco>
-        <Bloco>
+        </ColBlock>
+        <ColBlock>
           <strong>Informações de interesse</strong>
           <ul>
             <li>Termos e condições</li>
@@ -29,18 +29,18 @@ export default function Footer() {
             <li>Como fazer compras</li>
             <li>Venda com a Haio</li>
           </ul>
-        </Bloco>
-        <Bloco>
+        </ColBlock>
+        <ColBlock>
           <strong>Siga-nos</strong>
           <social>
             <img src={iconInstagram} alt="Facebook" />
             <img src={iconTwitter} alt="Twitter" />
             <img src={iconFacebook} alt="Facebook" />
           </social>
-        </Bloco>
+        </ColBlock>
       </Navegacao>
       <Copyright>
-        © 2020 Haio - HAIO INTERMEDIAÇÃO DE NEGÓCIOS LTDA., CNPJ 69.800.177/0001-30, Rua Capitão Antonio Rosa, 607, Jardim Paulistano, São Paulo/SP, Brasil.
+        © 2020 Haio - HAIO INTERMEDIAÇÃO DE NEGÓCIOS LTDA.<br /> CNPJ 69.800.177/0001-30, Rua Capitão Antonio Rosa, 607, Jardim Paulistano, São Paulo/SP, Brasil.
       </Copyright>
     </Container>
   );

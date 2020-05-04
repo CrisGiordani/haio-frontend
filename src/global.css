@@ -15,7 +15,6 @@
 body {
   font: 200 14px Roboto, sans-serif;
   background: #F6F9FB;
-  
 }
 
 h1 {
@@ -47,9 +46,7 @@ form input {
   border-radius: 4px;
   padding: 22px;
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  
-  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
 }
 
 @media screen and (min-width: 275px) {
@@ -67,8 +64,6 @@ form input {
     font-size: 1em;
   }
 }
-
-
 
 form textarea {
   width: 100%;

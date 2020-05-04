@@ -11,7 +11,7 @@ import shoppingCart from "./assets/shopping-cart.svg";
 // global assets
 import starIcon from "../../assets/star.png";
 
-import { Container, Destaques, Card, Info } from './styles';
+import { Container, RowBlock, ColBlock, Destaques, Card, Info } from './styles';
 
 export default function Home(req, res) {
 
@@ -45,7 +45,7 @@ export default function Home(req, res) {
       distance: '1.2',
       delivery_value: '4.50',
       delivery_time: '30', 
-    }
+    },
   ]
 
   return (
@@ -53,34 +53,37 @@ export default function Home(req, res) {
       <Header />
       <Container>
 
-        <div className='divBody'>
-          <img style={{ maxWidth:'65%' }} src={homeTopText} alt="Nunca foi tão fácil realizar uma compra online, perto de você e sem sair de casa."/>
-          <img style={{ maxWidth:'30%' }} src={homeTopImg} alt="Haio" />
-        </div>
+        <RowBlock>
+          <img style={{ maxWidth:'65%', minWidth: 300 }} src={homeTopText} alt="Nunca foi tão fácil realizar uma compra online, perto de você e sem sair de casa."/>
+          <img style={{ maxWidth:'25%', minWidth: 200  }} src={homeTopImg} alt="Haio" />
+        </RowBlock>
 
-        <span>Descubra um estabelecimento mais próximo de você</span>
-        <form>
-          <input placeholder="Digite seu endereço ou CEP" />
-          <Button className='btBuscar'>Buscar </Button>
-        </form>
+        <ColBlock>
+          <span>Descubra um estabelecimento mais próximo de você</span>
+          <form>
+            <input placeholder="Digite seu endereço ou CEP" />
+            <Button className='btBuscar'>Buscar </Button>
+          </form>
+        </ColBlock>
 
-        <div className='divBody'>
-          <img style={{ maxWidth:'30%' }} src={shoppingCart} alt="Shopping Cart - Haio"/>
-          <span style={{ margin: '0 10% 0 10%', maxWidth:'50%' }} >
+        <RowBlock>
+          <img style={{ maxWidth:'30%', minWidth: 180  }} src={shoppingCart} alt="Shopping Cart - Haio"/>
+          <span style={{ maxWidth:'50%', minWidth: 250 }} >
               O PRODUTO é focado na cotação para o consumidor que escolhe a loja que quer 
               pedir, fala com o vendedor, realiza pagamento por link e finaliza a transação 
               por meio de retirada ou serviço de entrega.
 
               <Button style={{ marginTop: '10%', marginLeft:0}}>Cadastre-se</Button>
           </span>
-        </div>
+        </RowBlock>
 
-        <h2>Os destaques da Haio</h2>  
-        <Destaques className='divBody'>
+        <h2>Os destaques da Haio</h2> 
+
+        <Destaques>
           {destaques.map(item => (
             <Card key={item.id}>
               <img alt={item.name} src={`https://api.adorable.io/avatars/50/${item.name}.png`} />
-              <div className="info">
+              <Info>
                 <strong>{item.name}</strong>
                 <score>
                     <img src={starIcon} alt="Avaliação" />
@@ -89,14 +92,14 @@ export default function Home(req, res) {
                 </score>
                 <delivery>Entrega: R$ {item.delivery_value}</delivery>
                 <delivery>Aprox. {item.delivery_time} min - {item.distance} Km</delivery>
-              </div>
+              </Info>
             </Card>
           ))}
         </Destaques>
 
-        <Footer  className='divBody'/>
+        
       </Container>
-      
+      <Footer />
     </>
   )
   }

@@ -14,7 +14,7 @@ export const MenuItem = styled(Link)`
 
   @media ${device.tablet} { 
     display:flex;
-    font-size: 0.9em;
+    font-size: 1em;
     font-style: normal;
     font-weight: normal;
     color: #000;

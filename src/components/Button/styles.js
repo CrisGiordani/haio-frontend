@@ -6,20 +6,17 @@ export const Container = styled.div`
   background: #BE0E02;
   border-radius: 3px;
   white-space: nowrap;
-  
-  display: flex;
-  flex: 1;
+  max-width: 140px;
+
   align-items: center;
   justify-content: center;
   cursor: pointer;
 
   @media ${device.mobile} {
-    font-size: 1em;
-    padding: 8px 12px;
+    padding: 6px 10px;
   }
   @media ${device.tablet} {
-    font-size: 1em;
-    padding: 12px 25px;
+    padding: 10px 25px;
   }
 
 `;

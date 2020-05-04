@@ -20,7 +20,7 @@ export default function Routes() {
           ) : (
             <>
               <Route path="/" exact component={Home} /> 
-              <Route path="/quem_somos" component={QuemSomos} /> 
+              <Route path="/quem_somos" component={QuemSomos} />  
               <Route path="/atendimento" component={Atendimento} /> 
               <Route path="/login" component={Login} />
             </>
