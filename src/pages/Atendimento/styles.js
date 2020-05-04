@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { device } from '../../devices';
 
+import Button from "../../components/Button";
+
 export const Container = styled.div`
   width: 90%;
   max-width: 950px;
@@ -62,12 +64,23 @@ export const RowBlock = styled.div`
     flex: 1;
     flex-direction: column;
     align-items: left;
-
-    .longButton {
-      background-color: blue;
-
-    }
   }
+`;
 
-  
+
+export const SubmitButton = styled(Button)`
+    min-width: 280px;
+    margin-left: 10px;
+    padding: 14px 20px;
+    @media ${device.mobile} {
+      font-size: 0.9em;
+    }
+
+    @media ${device.tablet} { 
+      font-size: 1em;
+    }
+
+    @media ${device.desktop} { 
+      font-size: 1em;
+    }
 `;

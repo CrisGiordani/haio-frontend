@@ -77,9 +77,9 @@ export const ModalContainer = styled.div`
 export const SubmitButton = styled(Button)`
     min-width: 100%;
     margin-top: 1em; 
-    padding: 12px 20px;
+    padding: 14px 20px;
     @media ${device.mobile} {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
 
     @media ${device.tablet} { 
